@@ -1,0 +1,17 @@
+
+/* about section start */
+.category{
+    display: flex;
+    flex-direction: column;
+}
+#categorymain
+{
+ min-height:300px;
+ width:600px;
+}
+.categorypart
+{
+ height:150px;
+ width:200px;
+ float:left;
+}

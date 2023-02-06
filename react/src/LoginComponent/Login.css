@@ -1,0 +1,37 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.login {
+  /* margin: 2rem;
+  width: calc(100% - 4rem);
+  background-color: rgba(128, 23, 167, 0.31);
+  background-color: #0dff82b0;
+  background-image: linear-gradient(45deg, #0dff82a3 0%, #9220ac9f 100%);
+
+  /* border: 1px solid rgba(5, 6, 5, 0.835); */
+  /* border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0px 0px 20px rgb(114, 17, 155), 0px 10px 20px rgba(0, 0, 0, 0.05),
+    0px 20px 20px rgba(186, 175, 175, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05); */
+}
+.login > .formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup > input,
+.formGroup > textarea {
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.addcat0{
+  margin: auto;
+}
+
+.class_text {
+  color: chartreuse;
+}

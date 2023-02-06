@@ -1,0 +1,38 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.addcat {
+}
+.adcatcont {
+  margin: 2rem;
+  padding: 5rem;
+  width: calc(100% - 4rem);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.3) !important; /*  hjghj*/
+  background-color: rgb(255, 255, 255);
+  opacity: 75%;
+  /* backdrop-filter: blur(10px); */
+  border-bottom: 1px solid #666667;
+}
+.addcat > .formGroup {
+  margin-bottom: 1rem;
+}
+.adcatbtn {
+  border-radius: 20px;
+  color: red;
+}
+
+.section-heading {
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.class_text {
+  color: cornflowerblue;
+}
