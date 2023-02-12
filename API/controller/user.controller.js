@@ -45,6 +45,7 @@ export var deleteUser=async(request,response,next)=>{
 
 export var updateUser=async(request,response,next)=>{
   let userDetails = await UserSchemaModel.findOne(request.body.condition);
+  //console.log(response);
   if(userDetails){
      let user=await UserSchemaModel.updateOne(request.body.condition,{$set: request.body.set});   
      if(user)

@@ -23,7 +23,7 @@ function Banner() {
                   .
                 </p>
                 <div className="button">
-                  <a href="#">Order Now!</a>
+                  <a href="www.google.com">Order Now!</a>
                 </div>
               </div>
             </div>

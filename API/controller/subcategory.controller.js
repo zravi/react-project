@@ -12,7 +12,7 @@ export var save=async (req,response,next)=>{
   var subcatname=req.body.subcatnm
   var subcaticon=req.files.subcaticon
   var subcaticonname=Date.now()+"-"+subcaticon.name;
-  var uploadpath=path.join(__dirname,"../../p/public/assets/uploads/subcaticons",subcaticonname);
+  var uploadpath=path.join(__dirname,"../../pix/public/assets/uploads/subcaticons",subcaticonname);
   subcaticon.mv(uploadpath);
   var subcategoryList = await SubCategorySchemaModel.find();
   var l=subcategoryList.length;

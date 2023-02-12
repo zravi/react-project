@@ -1,6 +1,7 @@
 
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import {Switch}from 'react-router-dom'
 
 import Header from "./Header/Header";
 import Nav from "./Nav/Nav";
@@ -30,6 +31,7 @@ import Featured from "./Featured/Featured";
 import Subscribe from "./Subscribe/Subscribe";
 import Footer from "./Footer/Footer";
 import EPUser from "./EPUser/EPUser";
+import PageNotFound from "./404/PageNotFound";
 
 function App() {
   return (
@@ -57,15 +59,17 @@ function App() {
         <Route path="/viewsubcat/:catname" element={<Searchsubcategory />} ></Route>
 
         <Route path="/epadmin" element={<EPAdmin />} ></Route>
-        <Route path="/Addproduct" element={<Addproduct />} ></Route>
+        <Route path="/addproduct" element={<Addproduct />} ></Route>
         <Route path="/verifyuser/:email" element={<Verifyuser />} ></Route>
 
         <Route path="/epuser" element={<EPUser />} ></Route>
 
         <Route path="/user" element={<Userhome />}></Route>
         <Route path="/logout" element={<Logout />}></Route>
-      </Routes>
+        <Route path='*' component={PageNotFound} />
 
+      </Routes>
+      
       {/* Featured Starts Here */}
       <Featured />
       {/* Featred Ends Here */}

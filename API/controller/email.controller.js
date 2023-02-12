@@ -6,16 +6,16 @@ var sendMail = (email,password)=>{
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-     user: 'user@gmail.com',
-     pass: 'vtzkfcocejfxqgvv'
+    user: 'vilekhofficial@gmail.com',
+    pass: 'vtzkfcocejfxqgvv'
   }
 });
 
 var mailOptions = {
-  from: 'user@gmail.com',
+  from: 'vilekhofficial@gmail.com',
   to: email,
-  subject: "Verification Mail ",
-  html: "<h1>Welcome</h1><p>you have successfully register to our site , your login credentials are attached below</p><h3>Username : "+email+"</h3><h3>Password : "+password+"</h3><h1>Click on the link below to verify your account</h1> http://localhost:3000/verifyuser/"+email
+  subject: "Verification Mail PostKrde.com",
+  html: "<h1>Welcome to PostKrde.com</h1><p>you have successfully register to our site , your login credentials are attached below</p><h3>Username : "+email+"</h3><h3>Password : "+password+"</h3><h1>Click on the link below to verify your account</h1> http://localhost:3000/verifyuser/"+email
 };
 
 transporter.sendMail(mailOptions, function(error, info){

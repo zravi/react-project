@@ -3,7 +3,7 @@ import "./About.css";
 
 function About() {
   return (
-    <div>
+    <>
       {/* About Page Starts Here */}
       <div className="about-page">
         <div className="mica">
@@ -22,7 +22,7 @@ function About() {
             <div className="col-md-6">
               <div className="right-content">
                 <h4>Phasellus vel interdum elit</h4>
-                <p><a href="">Photo Credit</a>{" "}
+                <p><a href="www.google.com">Photo Credit</a>{" "}
                   goes to Pexels website. Aliquam erat volutpat. Pellentesque
                   fringilla, ligula consectetur cursus scelerisque, leo elit
                   pellentesque sapien, et pharetra arcu elit vitae sem.
@@ -65,9 +65,9 @@ function About() {
                   <h6>
                     Find us on:{" "}
                     <span>
-                      <a href="#"><i className="fa fa-facebook" /></a>
-                      <a href="#"><i className="fa fa-linkedin" /></a>
-                      <a href="#"><i className="fa fa-twitter" /></a>
+                      <a href="www.google.com"><i className="fa fa-facebook" /></a>
+                      <a href="www.google.com"><i className="fa fa-linkedin" /></a>
+                      <a href="www.google.com"><i className="fa fa-twitter" /></a>
                     </span>
                   </h6>
                 </div>
@@ -77,7 +77,7 @@ function About() {
         </div>
       </div>
       {/* About Page Ends Here */}
-    </div>
+    </>
   );
 }
 

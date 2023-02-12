@@ -13,12 +13,16 @@ import subcategoryRouter from './router/subcategory.router.js';
 //cors configuration
 app.use(cors());
 
-//configuration to extract request body content 
-app.use(bodyParser());
-
 //configuration to handle file resources
 app.use(fileupload());
 
+
+
+//to extract body data from request (POST , PUT , DELETE , PATCH)
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+
+//route level middleware to load api router
 app.use("/user",userRouter);
 app.use("/category",categoryRouter);
 app.use("/subcategory",subcategoryRouter);

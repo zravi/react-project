@@ -11,7 +11,7 @@ export var save=async (req,response,next)=>{
   var catname=req.body.catnm
   var caticon=req.files.caticon
   var caticonname=Date.now()+"-"+caticon.name;
-  var uploadpath=path.join(__dirname,"../../p/public/assets/uploads/caticons",caticonname);
+  var uploadpath=path.join(__dirname,"../../pix/public/assets/uploads/caticons",caticonname);
   caticon.mv(uploadpath);
   var categoryList = await CategorySchemaModel.find();
   var l=categoryList.length;
