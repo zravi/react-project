@@ -44,4 +44,8 @@
 .about-page .right-content span a:hover i {
   background-color: #3a8bcd;
 }
+.p{
+  background:url("#");
+  -webkit-background-clip: text;
+}
 

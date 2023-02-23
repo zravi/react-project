@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>division</title>
+  </head>
+  <body>
+    <style>
+      /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"); */
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        /*   margin: 0; */
+        background: rgb(62, 59, 59);
+      }
+
+      .container {
+        display: grid;
+        height: 100vh;
+        margin: 0;
+        grid-template-columns: 200px 300px 200px;
+        grid-gap: 10px;
+        font-family: "Poppins", sans-serif;
+        /*   grid-auto-rows: minmax(200px, auto); */
+        justify-content: center;
+        align-content: center;
+      }
+
+      .container > div {
+        padding: 40px;
+        background: #f14668;
+        text-align: center;
+        font-size: 32px;
+        border-radius: 10px;
+      }
+
+      .container > div:nth-child(odd) {
+        background: #ffd880;
+      }
+
+      .one {
+        grid-column: 1 / 4;
+      }
+
+      .three {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+      }
+      .eleven {
+        color: blue;
+      }
+    </style>
+    <div class="container">
+      <div class="one"><h1>hello</h1></div>
+      <div>2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+      <div class="five">5</div>
+      <div class="six">6</div>
+      <div class="seven">7</div>
+      <div class="eight">8</div>
+      <div>9</div>
+      <div>10</div>
+      <div class="eleven">11</div>
+    </div>
+  </body>
+</html>

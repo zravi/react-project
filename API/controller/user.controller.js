@@ -43,19 +43,53 @@ export var deleteUser=async(request,response,next)=>{
     return response.status(404).json({error: 'Resource not found'});             
 }
 
-export var updateUser=async(request,response,next)=>{
-  let userDetails = await UserSchemaModel.findOne(request.body.condition);
-  //console.log(response);
-  if(userDetails){
-     let user=await UserSchemaModel.updateOne(request.body.condition,{$set: request.body.set});   
-     if(user)
-      return response.status(201).json({"msg":"success"});
-     else
-      return response.status(500).json({error: "Server Error"});
+// export var updateUser=async(request,response,next)=>{
+//   let userDetails = await UserSchemaModel.findOne(request.body.condition);
+//   //console.log(response);
+//   if(userDetails){
+//      let user=await UserSchemaModel.updateOne(request.body.condition,{$set: request.body.set});   
+//      if(user)
+//       return response.status(201).json({"msg":"success"});
+//      else
+//       return response.status(500).json({error: "Server Error"});
+//   }
+//   else
+//    return response.status(404).json({error: "Requested resource not available"});
+// }
+
+
+export var updateUser = async (request, response, next) => {
+  const id = request.params.id;
+  const condition = id ? { _id: id } : request.body.condition;
+  const userDetails = await UserSchemaModel.findOne(condition);
+
+  if (userDetails) {
+    const updateQuery = id ? request.body : { $set: request.body.set };
+    const user = await UserSchemaModel.updateOne(condition, updateQuery);
+
+    if (user) {
+      return response.status(201).json({ "msg": "success" });
+    } else {
+      return response.status(500).json({ error: "Server Error" });
+    }
+  } else {
+    return response.status(404).json({ error: "Requested resource not available" });
   }
-  else
-   return response.status(404).json({error: "Requested resource not available"});
-}
+};
+
+// export var updateUser=async(request,response,next)=>{
+//   let userDetails = await UserSchemaModel.findOne(request.body.condition);
+//   //console.log(response);
+//   if(userDetails){
+//      let user=await UserSchemaModel.updateOne(request.body.condition,{$set: request.body.set});   
+//      if(user)
+//       return response.status(201).json({"msg":"success"});
+//      else
+//       return response.status(500).json({error: "Server Error"});
+//   }
+//   else
+//    return response.status(404).json({error: "Requested resource not available"});
+// }
 
 export var login=async (req,response,next)=>{
   var userDetails=req.body;

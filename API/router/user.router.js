@@ -10,6 +10,8 @@ router.get("/fetch",userController.fetch);
 router.delete("/delete/:id",userController.deleteUser);
 
 router.patch("/update",userController.updateUser);
+router.patch("/update/:id",userController.updateUser);
+
 
 router.post("/login",userController.login);
 

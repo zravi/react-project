@@ -38,6 +38,15 @@ function Manageusers() {
     }
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
 
 
   return (
@@ -58,7 +67,7 @@ function Manageusers() {
               <th>Info</th>
               <th>Status</th>
               <th>Action</th>
-              <th>ep</th>
+              <th>edit</th>
             </tr>
             {userDetails.map((row) => (
                 <tr>
@@ -71,13 +80,23 @@ function Manageusers() {
                   <td>{row.city}</td>
                   <td>{row.gender}</td>
                   <td>{row.info}</td>
-                <td>
-                    {row.status === 0 &&<button className="btn btn-primary" onClick={() => { manageUserStatus(row._id, "verify") }} >Verify User</button>}
-                    {row.status === 1 &&<button className="btn btn-danger" onClick={() => { manageUserStatus(row._id, "block") }} >Block User</button>}
-                </td>
-                  <td>
-                  <button className="btn btn-dark" onClick={() => { manageUserStatus(row._id, "delete") }} >Delete User</button></td>
+                <td>{row.status === 0 &&<button className="btn btn-primary" onClick={() => { manageUserStatus(row._id, "verify") }} >Verify User</button>}
+                    {row.status === 1 &&<button className="btn btn-danger" onClick={() => { manageUserStatus(row._id, "block") }} >Block User</button>}</td>
+                  <td><button className="btn btn-dark" onClick={() => { manageUserStatus(row._id, "delete") }} >Delete User</button></td>
+
+                  <td><>
+      <button onClick={handleButtonClick}>Open Modal</button>
+      {isModalOpen && (
+        <Modal onClose={handleModalClose}>
+          <h2>Modal Title</h2>
+          <p>Modal Content</p>
+        </Modal>
+      )}
+    </></td>
+
+
                 </tr>
+                
                   ))}
           </table>
           <hr style={{"border":"1px solid purple"}}/>
