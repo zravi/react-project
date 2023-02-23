@@ -3,13 +3,13 @@ import nodemailer from 'nodemailer';
 
 var sendMail = (email,password)=>{
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'vilekhofficial@gmail.com',
-    pass: 'vtzkfcocejfxqgvv'
-  }
-});
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     // user: '0000vilekhofficial@gmail.com',
+//     // pass: '0000vtzkfcocejfxqgvv'
+//   }
+// });
 
 var mailOptions = {
   from: 'vilekhofficial@gmail.com',
