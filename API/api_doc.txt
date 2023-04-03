@@ -1,4 +1,4 @@
-
+npm install @babel/core @babel/node @babel/preset-env babel-plugin-add-module-exports nodemon mongoose mongoose-unique-validator body-parser cors express express-fileupload nodemailer jsonwebtoken --save-dev
 
 -> User's API
 

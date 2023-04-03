@@ -1,7 +1,6 @@
 
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import {Switch}from 'react-router-dom'
 
 import Header from "./Header/Header";
 import Nav from "./Nav/Nav";
@@ -44,32 +43,27 @@ function App() {
       {/* Banner Ends Here */}
 
       <Routes>
-        <Route path="/" element={<Content />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/service" element={<Service />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/admin" element={<Adminhome />}></Route>
-        <Route path="/manageusers" element={<Manageusers />}></Route>
-        <Route path="/addcat" element={<Addcategory />} ></Route>
-
-        <Route path="/addsubcategory" element={<Addsubcategory />} ></Route>
-        <Route path="/searchproduct" element={<Searchproduct />} ></Route>
-        <Route path="/viewsubcat/:catname" element={<Searchsubcategory />} ></Route>
-
-        <Route path="/epadmin" element={<EPAdmin />} ></Route>
-        <Route path="/addproduct" element={<Addproduct />} ></Route>
-        <Route path="/verifyuser/:email" element={<Verifyuser />} ></Route>
-
-        <Route path="/epuser" element={<EPUser />} ></Route>
-
-        <Route path="/user" element={<Userhome />}></Route>
-        <Route path="/logout" element={<Logout />}></Route>
-        <Route path='*' component={PageNotFound} />
-
+        <Route path="/" element={<Content />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Adminhome />} />
+        <Route path="/manageusers" element={<Manageusers />} />
+        <Route path="/addcat" element={<Addcategory />} />
+        <Route path="/addsubcategory" element={<Addsubcategory />} />
+        <Route path="/searchproduct" element={<Searchproduct />} />
+        <Route path="/viewsubcat/:catname" element={<Searchsubcategory />} />
+        <Route path="/epadmin" element={<EPAdmin />} />
+        <Route path="/addproduct" element={<Addproduct />} />
+        <Route path="/verifyuser/:email" element={<Verifyuser />} />
+        <Route path="/epuser" element={<EPUser />} />
+        <Route path="/user" element={<Userhome />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-      
+
       {/* Featured Starts Here */}
       <Featured />
       {/* Featred Ends Here */}

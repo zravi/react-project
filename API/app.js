@@ -9,6 +9,7 @@ var app = express();
 import userRouter from './router/user.router.js';
 import categoryRouter from './router/category.router.js';
 import subcategoryRouter from './router/subcategory.router.js';
+import productRouter from './router/product.router.js';
 
 //cors configuration
 app.use(cors());
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use("/user",userRouter);
 app.use("/category",categoryRouter);
 app.use("/subcategory",subcategoryRouter);
+app.use("/product",productRouter);
 
 app.listen(3001);
-console.log("server started at http://localhost:3001");
+console.log("server started at http://localhost:3001"+" \n"+ Date());

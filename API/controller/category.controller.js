@@ -2,7 +2,7 @@ import '../model/connection.js';
 import url from 'url';
 import path from 'path';
 
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+// const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 //to link schema model
 import CategorySchemaModel from '../model/category.model.js';
